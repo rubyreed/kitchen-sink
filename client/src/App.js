@@ -3,16 +3,17 @@ import Home from "./pages/Home";
 import Public from "./pages/Public";
 import Protected from "./pages/Protected";
 import { Route, Routes } from "react-router-dom";
-import Layout from "./pages/Layout";
 import RequireAuth from "./components/RequireAuth";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import NavBar from "./pages/NavBar";
 
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
+    <div>
+      <NavBar/>
+      <Routes>
         {/* public routes go here */}
         <Route path="/public" element={<Public />} />
         <Route path="/register" element={<Register />} />
@@ -22,8 +23,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/protected" element={<Protected />} />
         </Route>
-      </Route>
     </Routes>
+    </div>
   );
 }
 

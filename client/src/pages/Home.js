@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Header } from "semantic-ui-react";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
  
   return (
     <div>
-      <h1>Home!</h1>
+      <Header>Home!</Header>
       <p>Authenticated? {JSON.stringify(auth)}</p>
     </div>
   );

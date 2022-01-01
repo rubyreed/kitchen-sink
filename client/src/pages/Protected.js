@@ -1,10 +1,11 @@
 import { useContext } from "react";
+import { Header } from "semantic-ui-react";
 import { AuthContext } from "../providers/AuthProvider";
 const Protected = () => {
   const auth = useContext(AuthContext);
   return (
     <div>
-      <h1>Protected</h1>
+      <Header>Protected</Header>
       <p>Email: {auth.email}</p>
       <p> {JSON.stringify(auth)}</p>
       {auth.authenticated && <p>You are logged in!</p>}
